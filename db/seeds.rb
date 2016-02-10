@@ -5,3 +5,4 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+Image.create(title: 'Galaxy', image_url:'https://newevolutiondesigns.com/images/freebies/galaxy-wallpaper-36.jpg')
