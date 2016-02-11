@@ -1,22 +1,24 @@
 
 class ImagesController < ApplicationController
+include Magick
 
   def index
     @images = Image.all
+    @image = Magick::Image.read(Image.first.image_url)
   end
 
   def new
   end
 
   def create
-    @image = Image.new(image_params)
-    image = Magick::Image.read(@image.image_url).first
-    @image.width = image.columns
-    @image.height = image.rows
+    # @image = Image.new(image_params)
+    # image = Magick::Image.read(@image.image_url).first
+    # @image.width = image.columns
+    # @image.height = image.rows
 
-    if @image.save
-      redirect_to image_path
-    end
+    # if @image.save
+    #   redirect_to image_path
+    # end
   end
 
   def show

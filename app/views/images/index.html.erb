@@ -3,6 +3,7 @@
 <%@images.each do |image|%>
   <%= image_tag image.image_url %>
 <%end%>
+<%=@image%>
 
 <%= button_to "Zoom 0", @zoom_level%>
 <%= button_to "Zoom 1", @article %>
