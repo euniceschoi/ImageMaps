@@ -1,0 +1,14 @@
+<h1>PicMaps</h1>
+
+<% @pictures.each do |picture| %>
+  <%= image_tag picture.picture_url %>
+  height:<%= Magick::Image.read(picture.picture_url).first.rows %>
+  width:<%= Magick::Image.read(picture.picture_url).first.columns %>
+<%end%>
+
+
+
+<%= button_to "Zoom Level 0", new_zoom_level_path %>
+<%= button_to "Zoom Level 1", new_zoom_level_path %>
+<%= button_to "Zoom Level 2", new_zoom_level_path %>
+<%= button_to "Zoom Level 3", new_zoom_level_path %>
