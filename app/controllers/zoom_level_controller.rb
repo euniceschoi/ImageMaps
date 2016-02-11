@@ -1,0 +1,2 @@
+class ZoomLevelController < ApplicationController
+end
