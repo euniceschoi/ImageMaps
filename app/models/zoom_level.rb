@@ -1,6 +1,6 @@
 class ZoomLevel < ActiveRecord::Base
 
-  def solve_coordinates(zoom_level,width,height)
+  def self.solve_coordinates(zoom_level,width,height)
   x = (width/4).to_f
   y = (height/4).to_f
   zero = 0
@@ -8,7 +8,7 @@ class ZoomLevel < ActiveRecord::Base
     coordinates =
       [
         [0, 0, 2 * x, 2 * y],
-        [2x, 0, 4 * x, 2 * y],
+        [2 * x, 0, 4 * x, 2 * y],
         [0, 2 * y, 2 * x, 4 * y],
         [2 * x, 2 * y, 4 * x, 4 * y]
       ]
