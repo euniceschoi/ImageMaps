@@ -3,7 +3,7 @@ include Magick
 
   def index
     @pictures= Picture.all
-    @picture = Magick::Image.read(Picture.first.image_url)
+    @picture = Magick::Image.read(Picture.first.picture_url).first
   end
 
   def new

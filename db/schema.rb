@@ -29,6 +29,7 @@ ActiveRecord::Schema.define(version: 20160211210039) do
     t.integer  "zoom_level"
     t.integer  "row"
     t.integer  "column"
+    t.string   "tile_url"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -37,8 +38,9 @@ ActiveRecord::Schema.define(version: 20160211210039) do
     t.integer  "level"
     t.integer  "rows"
     t.integer  "columns"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.string   "picture_url"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
 end
