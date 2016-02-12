@@ -17,7 +17,9 @@ class ZoomLevelController < ApplicationController
   end
 
   def show
+    @picture_url = Picture.first.picture_url
     picture = Magick::Image.read(Picture.first.picture_url).first
+    @zoom_level = params[:id]
     width = picture.columns
     height = picture.rows
       x = (width/4).to_f
