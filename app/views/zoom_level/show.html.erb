@@ -1,0 +1,18 @@
+<h1>Zoom Level <%=@zoom_level %></h1>
+<br>
+
+<img src="<%=@picture_url%>" usemap="#pictures"/>
+
+<br>
+
+<% @coordinates.each do |coordinate| %>
+  <%= coordinate %>
+  <br>
+<%end%>
+
+<map name="pictures">
+  <% @coordinates.each do |coordinate| %>
+    <area shape="rect" coords="<%=coordinate[0], coordinate[1], coordinate[2], coordinate[3] %>" href="http://www.stumbleupon.com/" title="Image" alt="Image" />
+  <%end%>
+  <area shape="default" nohref="nohref" title="Default" alt="Default"/>
+</map>

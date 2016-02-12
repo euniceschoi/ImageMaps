@@ -4,6 +4,7 @@ class CreateZoomLevels < ActiveRecord::Migration
       t.integer :level
       t.integer :rows
       t.integer :columns
+      t.string :picture_url
       t.timestamps null: false
     end
   end
